@@ -1,35 +1,35 @@
-# Konjungate Core v1.0.2.1
+# Konjungate Core v1.1.6.2
 
 Name: Konjungate<br/>
 Ticker: KONJ<br/>
-Type: Hybrid, POS / POW / Masternodes<br/>
+Type: Hybrid, POS / Masternodes --> POW ends on Block 700000<br/>
 Algorithm: bmw512<br/>
 Total Coin Supply: 21 billion<br/>
 BlockSize (depending on block saturation): 1.525612 MB min - 15.256128 MB max<br/>
 BlockTime: ~ 30 sec.
 
 Rewards per Block:
-250 KONJ / BLOCK (shared as follow)<br/><br/>
+Dynamic to Block 6800888 (see image below)
+From Block 6800889: 245 KONJ / BLOCK (shared as follow)<br/><br/>
 
-Dynamic reward starts on block height 526000.<br/><br/>
+Dynamic reward structure.<br/><br/>
 
-POW 62.5 KONJ decreasing 10% every 6 month<br/>
-POS 48.75 KONJ decreasing 15% every 6 month <br/>
-MN. 113,75 KONJ increasing 17% every 6 month<br/><br/>
+<img width="964" alt="Screen Shot 2021-06-13 at 22 44 53" src="https://user-images.githubusercontent.com/55807677/121821413-0cb23400-cc99-11eb-8be6-591b71cc9133.png">
 
 Masternode Collateral: 2750000 KONJ
 
 
-Charity fee (taken from POW): 25 KONJ to support contemporary ART.<br/>
-Please visit https://www.machfeld-foundation.net to see our supported Projects.
+Charity fee: 25 KONJ to support contemporary ART.<br/>
+Please visit https://www.machfeld-foundation.net and https://wendy.network to see our supported Projects.
 
 Official Website:<br/>
 https://www.konjungate.net
 
 ## What is Konjungate?
-KONJUNGATE - The Artbased Blockchain To change the funding of Artists and Institutions. Based on the cyber novel MACHFELD by Michael Mastrototaro © 1999
+KONJUNGATE - The Artbased Blockchain is based on the cyber novel MACHFELD by Michael Mastrototaro © 1999
 
-Konjungate will chance the funding of contemporary Art and Art-Institutions using blockchain technology to change the way of contemporary art funding.
+Konjungate will chance the funding of contemporary Art and Art-Institutions using blockchain technology to change the way of contemporary art funding. 
+We are also developping our side chain solution. In addition to NFTs and Smart Contracts, this will also enable Web3 and dAPPs solutions. As part of the UUNIGATE community, our chain will then be able to communicate with all the alt coins involved. It’s even possible to “Whitelist” ETH and BSC and other network contracts we deem viable and safe for our users to interact with and allow them to join our fractal ecosystem More about this in a separate announcement.
 
 See our projects at:<br/>
 https://wendy.network<br/>
@@ -47,7 +47,9 @@ https://pool.konjungate.net/<br/>
 https://ahamay.net/
 
 Block Explorer:
-http://explore.konjungate.net/<br/><br/>
+http://explore.konjungate.net/<br/>
+https://openchains.info/coin/konjungate<br/>
+https://chainz.cryptoid.info/konj/<br><br>
 
 ## Social Media:<br/>
 Discord: https://discord.gg/K7hAfXg 
@@ -72,6 +74,10 @@ Reddit: https://www.reddit.com/user/KONJUNGATE/
 Crex 24:<br/>
 https://crex24.com/exchange/KONJ-BTC<br/>
 https://crex24.com/exchange/KONJ-ETH<br/><br/>
+
+DEX-TRADE:<br/>
+KONJ/BTC: https://dex-trade.com/spot/trading/KONJBTC<br/>
+KONJ/ETH:  https://dex-trade.com/spot/trading/KONJETH<br/><br/>
 
 Southxchange:<br/>
 BTC: https://main.southxchange.com/Market/Book/KONJ/BTC<br/>
@@ -108,20 +114,24 @@ https://wallet.autradex.systems/markets/epltc?markets=all&column=name&order=asc&
 ---------------->>>-----<<<<<<---------------------
 
 ## Developer
-Thanks to https://github.com/SaltineChips/ for his great work!! :)
+Thanks to https://github.com/SaltineChips/  and https://github.com/Pepsinside for there brains and work!! :)
 
+### BVAC (Bits Visualized As Color)
+BVAC is a unique system that we developed and created in house just for KONJ, Espers, CCASH and other associated projects. This offers us the ability to store ANY data as a PNG or JPG, similarly to a QR code, with only three files being required as apposed to three entire libraries that QR codes require and the data storage is denser. If you would like to learn more about this feature feel free to reach out to CryptoCoderz or SaltineChips. The current proof of concept implementation is the ability to store and read a public receiving address as a 16x16 BVAC image. Users can share their public keys this way by simply sending each other the BVAC image of the pubkey created from the wallet and then the receiving part is able to load the image using the wallet and decode it into the pubkey once again.
 
+### Tokens (Like ETH)
+Along with NFTs we have adapted the technology in the Fractal platform to launch and manage Tokens! No longer are there only the few giants that can do this, launch your own Token using Konjungate [KONJ] as "GAS" and for no where near the fees!
+
+### NFT (Non-fungible Token)
+Introducing altcoins to NFTs, as of v1.1.6.3 prototype now features NFT capabilities. This offers the ability to artists, musicians and animators alike a unified place to store, encrypt, protect, sell and share their artwork! Current compatible formats are JPG/JPEG, PNG, GIF (Animation), OGG VORBIS (Audio) in a square format for initial testing for pictures/animation and up to 5 minute sound files for OGG VORBIS audio. This is a soft limit done only for initial testing. These limits will soon be lifted for full release in future versions. This will also be how we store a student's degrees, transcripts, etc.
 
 ## Blockchain Technology
-
 The Konjungate [KONJ] Blockchain is an experimental smart contract platform protocol that enables instant payments to anyone, anywhere in the world in a private, secure manner. Konjungate [KONJ] uses peer-to-peer blockchain technology developed by Konjungate to operate with no central authority: managing transactions, execution of contracts, and issuing money are carried out collectively by the network. Konjungate [KONJ] is the name of open source software which enables the use of this protocol.
 
 ## Custom Difficulty Retarget Algorithm “VRX”
-
 VRX is designed from the ground up to integrate properly with the Velocity parameter enforcement system to ensure users no longer receive orphan blocks.
 
 ## Velocity Block Constraint System
-
 Ensuring Insane stays as secure and robust as possible the CryptoCoderz team have implemented what's known as the Velocity block constraint system. This system acts as third and final check for both mined and peer-accepted blocks ensuring that all parameters are strictly enforced.
 Wish (bmw512) Proof-of-Work Algorithm
 
@@ -166,7 +176,7 @@ Note: guide should be compatible with other Ubuntu versions from 14.04+
 
 ## GitHub pull (Source Download)
 
-```cd ~; git clone https://github.com/SaltineChips/Konjungate Konjungate```
+```git clone https://github.com/Konjungate/Konjungate-Core Konjungate```
 
 
 ## Build Konjungate daemon
