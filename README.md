@@ -1,4 +1,4 @@
-# Konjungate Core v1.1.6.2
+# Konjungate Core v1.1.7.11
 
 Name: Konjungate<br/>
 Ticker: KONJ<br/>
@@ -117,13 +117,14 @@ https://wallet.autradex.systems/markets/epltc?markets=all&column=name&order=asc&
 Thanks to https://github.com/SaltineChips/  and https://github.com/Pepsinside for there brains and work!! :)
 
 ### BVAC (Bits Visualized As Color)
-BVAC is a unique system that we developed and created in house just for KONJ, Espers, CCASH and other associated projects. This offers us the ability to store ANY data as a PNG or JPG, similarly to a QR code, with only three files being required as apposed to three entire libraries that QR codes require and the data storage is denser. If you would like to learn more about this feature feel free to reach out to CryptoCoderz or SaltineChips. The current proof of concept implementation is the ability to store and read a public receiving address as a 16x16 BVAC image. Users can share their public keys this way by simply sending each other the BVAC image of the pubkey created from the wallet and then the receiving part is able to load the image using the wallet and decode it into the pubkey once again.
+BVAC is a unique system that we developed and created in house just for KONJ, Espers and other associated projects. This offers us the ability to store ANY data as a PNG or JPG, similarly to a QR code, with only three files being required as apposed to three entire libraries that QR codes require and the data storage is denser. If you would like to learn more about this feature feel free to reach out to CryptoCoderz or SaltineChips. The current proof of concept implementation is the ability to store and read a public receiving address as a 16x16 BVAC image. Users can share their public keys this way by simply sending each other the BVAC image of the pubkey created from the wallet and then the receiving part is able to load the image using the wallet and decode it into the pubkey once again.
 
 ### Tokens (Like ETH)
 Along with NFTs we have adapted the technology in the Fractal platform to launch and manage Tokens! No longer are there only the few giants that can do this, launch your own Token using Konjungate [KONJ] as "GAS" and for no where near the fees!
 
 ### NFT (Non-fungible Token)
 Introducing altcoins to NFTs, as of v1.1.6.3 prototype now features NFT capabilities. This offers the ability to artists, musicians and animators alike a unified place to store, encrypt, protect, sell and share their artwork! Current compatible formats are JPG/JPEG, PNG, GIF (Animation), OGG VORBIS (Audio) in a square format for initial testing for pictures/animation and up to 5 minute sound files for OGG VORBIS audio. This is a soft limit done only for initial testing. These limits will soon be lifted for full release in future versions. This will also be how we store a student's degrees, transcripts, etc.
+We will enable NFT's on our international art project https://wendy.network once we go public with it!
 
 ## Blockchain Technology
 The Konjungate [KONJ] Blockchain is an experimental smart contract platform protocol that enables instant payments to anyone, anywhere in the world in a private, secure manner. Konjungate [KONJ] uses peer-to-peer blockchain technology developed by Konjungate to operate with no central authority: managing transactions, execution of contracts, and issuing money are carried out collectively by the network. Konjungate [KONJ] is the name of open source software which enables the use of this protocol.
@@ -209,23 +210,32 @@ If you recompiling some other time you don't have to repeat previous steps, but 
 cd ~; sudo ufw allow 19417/tcp; sudo ufw allow 18495/tcp; sudo ufw allow 22/tcp; sudo mkdir ~/.KONJ; cat << "CONFIG" >> ~/.KONJ/Konjungate.conf
 listen=1
 server=1
-daemon=1
-testnet=0
-rpcuser=KONJrpcuser
-rpcpassword=SomeCrazyVeryVerySecurePasswordHere
-rpcport=18495
+maxconnections=150
+rpcuser=yourusername
+rpcpassword=xx
 port=19417
+rpcport=18495
 rpcconnect=127.0.0.1
 rpcallowip=127.0.0.1
-addnode=37.187.180.53
-addnode=139.99.239.62
-addnode=192.99.212.20
-addnode=139.99.239.62
+daemon=1
+deminodes=1
+demimaxdepth=200
 addnode=188.166.109.87
-addnode=51.195.42.49
-addnode=193.70.84.182
-addnode=51.38.113.17
-addnode=110.232.115.241
+addnode=188.166.109.87:19417
+addnode=37.187.180.53
+addnode=37.187.180.53:19417
+addnode=139.99.239.62
+addnode=139.99.239.62:19417
+addnode=185.52.172.164
+addnode=185.52.172.164:19417
+addnode=51.195.102.171
+addnode=51.195.102.171:19417
+addnode=51.68.175.13
+addnode=51.68.175.13:19417
+addnode=155.138.148.198
+addnode=155.138.148.198:19417
+addnode=139.99.239.62
+addnode=139.99.239.62:19417
 CONFIG
 chmod 700 ~/.KONJ/Konjungate.conf; chmod 700 ~/.KONJ; ls -la ~/.KONJ
 ```

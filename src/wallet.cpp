@@ -908,6 +908,33 @@ int CWalletTx::GetRequestCount() const
     return nRequests;
 }
 
+void CWalletTx::GetStakeAmounts(CAmount& nFee, CAmount& nAmount, string& strSentAccount, CTxDestination& address, const isminefilter& filter) const
+{
+    LOCK(pwallet->cs_wallet);
+    nFee = 0;
+    nAmount = 0;
+    strSentAccount = "";
+    
+    if(!IsCoinStake()) return;
+
+    CAmount nDebit = GetDebit(filter);
+    CAmount nCredit = GetCredit(filter);
+
+    if(!(nDebit > 0 && nCredit > 0)) return;
+    
+    strSentAccount = strFromAccount;
+
+    if (!ExtractDestination(vout[1].scriptPubKey, address))
+    {
+        LogPrintf("CWalletTx::GetAmounts: Unknown transaction type found, txid %s\n",
+                    this->GetHash().ToString());
+        address = CNoDestination();
+    }
+
+    nAmount = nCredit - nDebit;
+    nFee = GetValueOut() - nCredit;
+}
+
 void CWalletTx::GetAmounts(list<pair<CTxDestination, int64_t> >& listReceived,
                            list<pair<CTxDestination, int64_t> >& listSent, CAmount& nFee, string& strSentAccount, const isminefilter& filter) const
 {
@@ -3190,8 +3217,8 @@ bool CWallet::CreateCoinStake(const CKeyStore& keystore, unsigned int nBits, int
     }
 
     int64_t blockValue = nCredit;
-    int64_t masternodePayment = GetMasternodePayment(pindexPrev->nHeight+1, nReward);
-    int64_t devopsPayment = GetDevOpsPayment(pindexPrev->nHeight+1, nReward); // TODO: Activate devops
+    int64_t masternodePayment = GetMasternodePayment(pindexPrev->nHeight, nReward);
+    int64_t devopsPayment = GetDevOpsPayment(pindexPrev->nHeight, nReward); // TODO: Activate devops
 
 
     // Set output amount
